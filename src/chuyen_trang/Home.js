@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
     return (
         <div>
@@ -94,9 +96,9 @@ function Home() {
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
                 <div className="container">
-                    <a className="navbar-brand fw-bold" href="/">
+                    <Link className="navbar-brand fw-bold" to="/">
                         <span style={{ color: '#e91e63' }}>❤️</span> Love House
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -109,21 +111,21 @@ function Home() {
                         <ul className="navbar-nav ms-auto align-items-center">
                             <li className="nav-item mx-2">
                                 {/* Absolute URLs (đường dẫn tuyệt đối) */}
-                               <a className="nav-link active" href="https://www.google.com/" target="_blank" rel="noreferrer">Google</a>
+                                <Link className="nav-link active" to="https://www.google.com/" target="_blank" rel="noreferrer">Google</Link>
                             </li>
                             <li className="nav-item mx-2">
                                 {/* Relative URLs (đường dẫn tương đối) */}
-                                <a className="nav-link active" href="/">Trang chủ</a>
+                                <Link className="nav-link active" to="/">Trang chủ</Link>
                             </li>
                             <li className="nav-item mx-2">
-                                <a className="nav-link" href="/Vy" >Tuyết Vy</a>
+                                <Link className="nav-link" to="/vy">Tuyết Vy</Link>
                             </li>
                             <li className="nav-item mx-2">
-                                <a className="nav-link" href="/Tran">Ngọc Trân</a>
+                                <Link className="nav-link" to="/Tran">Ngọc Trân</Link>
                             </li>
                             <li className="nav-item mx-2">
                                 {/* <button className="btn btn-custom">LOVE</button> */}
-                                <a href="/love" target="_blank" className="btn btn-custom">LOVE</a>
+                                <Link to="/love" target="_blank" className="btn btn-custom">LOVE</Link>
                             </li>
                         </ul>
                     </div>
@@ -155,7 +157,7 @@ function Home() {
                     <div className="col-12 col-md-4">
                         <div className="card card-custom h-100">
                             <img
-                                src="./images/tieude1.png"
+                                src={process.env.PUBLIC_URL + '/images/tieude1.png'}
                                 alt="Chuyện Tình"
                                 className="card-img-top"
                             />
@@ -171,7 +173,7 @@ function Home() {
                     <div className="col-12 col-md-4">
                         <div className="card card-custom h-100">
                             <img
-                                src="./images/tieude2.png"
+                                src={process.env.PUBLIC_URL + '/images/tieude2.png'}
                                 alt="Lời Chào Đầu"
                                 className="card-img-top"
                             />
@@ -187,7 +189,7 @@ function Home() {
                     <div className="col-12 col-md-4">
                         <div className="card card-custom h-100">
                             <img
-                                src="./images/tieude3.png"
+                                src={process.env.PUBLIC_URL + '/images/tieude3.png'}
                                 alt="Bắt Đầu Hành Trình"
                                 className="card-img-top"
                             />
@@ -217,12 +219,9 @@ function Home() {
                     <div className="row g-4">
                         <div className="col-12 col-md-6">
                             <div className="d-flex align-items-center gap-3 p-3 shadow-sm rounded">
-                                <img
-                                    src="./images/moment1.jpg"
-                                    alt="Moment 1"
+                                <img src={process.env.PUBLIC_URL + '/images/moment1.jpg'} alt="Moment 1"
                                     className="rounded-circle"
-                                    style={{ width: '80px', height: '80px', objectFit: 'cover' }}
-                                />
+                                    style={{ width: '80px', height: '80px', objectFit: 'cover' }} />
                                 <div>
                                     <h5 className="mb-1" style={{ color: '#e91e63' }}>Những lần Đầu Đi Chơi</h5>
                                     <p className="mb-0" style={{ color: '#555' }}>Nhớ những lần đầu tiên cùng nhau dạo phố, tay trong tay dưới ánh đèn ở bến Ninh Kiều...</p>
@@ -232,7 +231,7 @@ function Home() {
                         <div className="col-12 col-md-6">
                             <div className="d-flex align-items-center gap-3 p-3 shadow-sm rounded">
                                 <img
-                                    src="./images/moment2.jpg"
+                                    src={process.env.PUBLIC_URL + '/images/moment2.jpg'}
                                     alt="Moment 2"
                                     className="rounded-circle"
                                     style={{ width: '80px', height: '80px', objectFit: 'cover' }}
@@ -246,7 +245,7 @@ function Home() {
                         <div className="col-12 col-md-6">
                             <div className="d-flex align-items-center gap-3 p-3 shadow-sm rounded">
                                 <img
-                                    src="./images/moment3.jpg"
+                                    src={process.env.PUBLIC_URL + '/images/moment3.jpg'}
                                     alt="Moment 3"
                                     className="rounded-circle"
                                     style={{ width: '80px', height: '80px', objectFit: 'cover' }}
@@ -260,7 +259,7 @@ function Home() {
                         <div className="col-12 col-md-6">
                             <div className="d-flex align-items-center gap-3 p-3 shadow-sm rounded">
                                 <img
-                                    src="./images/moment4.jpg"
+                                    src={process.env.PUBLIC_URL + '/images/moment4.jpg'}
                                     alt="Moment 4"
                                     className="rounded-circle"
                                     style={{ width: '80px', height: '80px', objectFit: 'cover' }}
@@ -289,7 +288,7 @@ function Home() {
                     <div className="row">
                         <div className="col-12 col-md-6 d-flex flex-column align-items-center mb-4 mb-md-0">
                             <img
-                                src="./images/future1.jpg"
+                                src={process.env.PUBLIC_URL + '/images/future1.jpg'}
                                 alt="Future 1"
                                 className="img-fluid rounded shadow-lg lift-on-hover"
                                 style={{ maxWidth: '300px' }}
@@ -311,7 +310,7 @@ function Home() {
                     <div className="row gy-4">
                         <div className="col-12 col-md-3 text-center text-md-start">
                             <img
-                                src="./images/logoduoi.png"
+                                src={process.env.PUBLIC_URL + '/images/logoduoi.png'}
                                 alt="Logo dưới"
                                 style={{ maxWidth: '120px' }}
                             />

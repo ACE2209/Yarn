@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Vy = () => {
     return (
@@ -61,21 +63,23 @@ const Vy = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav ms-auto align-items-center">
-                                <li className="nav-item mx-2">
-                                    <a className="nav-link active" href="/">Trang chủ</a>
-                                </li>
-                                <li className="nav-item mx-2">
-                                    <a className="nav-link" href="/Vy">Tuyết Vy</a>
-                                </li>
-                                <li className="nav-item mx-2">
-                                    <a className="nav-link" href="/Tran">Ngọc Trân</a>
-                                </li>
-                                <li className="nav-item mx-2">
-                                    <a href="/love" className="btn btn-custom">LOVE</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul className="navbar-nav ms-auto align-items-center">
+                            <li className="nav-item mx-2">
+                                {/* Relative URLs (đường dẫn tương đối) */}
+                                <Link className="nav-link active" to="/">Trang chủ</Link>
+                            </li>
+                            <li className="nav-item mx-2">
+                                <Link className="nav-link" to="/vy">Tuyết Vy</Link>
+                            </li>
+                            <li className="nav-item mx-2">
+                                <Link className="nav-link" to="/Tran">Ngọc Trân</Link>
+                            </li>
+                            <li className="nav-item mx-2">
+                                {/* <button className="btn btn-custom">LOVE</button> */}
+                                <Link to="/love" target="_blank" className="btn btn-custom">LOVE</Link>
+                            </li>
+                        </ul>
+                    </div>
                     </div>
                 </nav>
                 <div className="bg-white rounded-2xl shadow-xl p-6 max-w-xl w-full text-center">
