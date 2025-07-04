@@ -56,7 +56,7 @@ const Tran = () => {
                                 <Link className="nav-link active" to="/">Trang chủ</Link>
                             </li>
                             <li className="nav-item mx-2">
-                                <Link className="nav-link" to="/vy">Tuyết Vy</Link>
+                                <Link className="nav-link" to="/Vy">Tuyết Vy</Link>
                             </li>
                             <li className="nav-item mx-2">
                                 <Link className="nav-link" to="/Tran">Ngọc Trân</Link>
