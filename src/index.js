@@ -6,16 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // tham chiếu id root trong index.html 
 root.render(
-  <BrowserRouter basename="/Yarn">
+  <HashRouter>
     <App />
-  </BrowserRouter>
-
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
